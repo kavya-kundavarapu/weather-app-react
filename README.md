@@ -95,21 +95,6 @@ npm run build
 ```
 
 ---
-
-## 🚀 Deployment
-
-This project is deployed using **Netlify**.
-
-### Steps:
-
-* Push code to GitHub
-* Connect repository to Netlify
-* Set:
-
-  * Build Command: `npm run build`
-  * Publish Directory: `build`
-
----
 🚀 Deployment
 
 This project is deployed using Netlify.
@@ -130,6 +115,7 @@ Drag & drop the build folder into Netlify
 ## 📸 Screenshots
 
 <img width="1919" height="1024" alt="image" src="https://github.com/user-attachments/assets/4f60d257-5dbf-4be7-8620-0e50fe7e956f" />
+
 
 <img width="1919" height="1021" alt="image" src="https://github.com/user-attachments/assets/2237cf8e-6d16-4d6e-9a65-0f4a91a4d6ac" />
 
