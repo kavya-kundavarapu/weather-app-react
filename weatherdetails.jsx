@@ -35,7 +35,7 @@ export function WeatherDetailsPage({ city }) {
             <h4>{weatherObj.name}</h4>
             <p className="text-muted">{weatherObj.weather[0].description}</p>
 
-            <h1 className="temp">{Math.round(weatherObj.main.temp)}°C</h1>
+            <h1 className="temp">{Math.round(weatherObj.main.temp)}&deg;c</h1>
 
             <button
               className="btn btn-primary w-100 mt-3"
@@ -53,35 +53,47 @@ export function WeatherDetailsPage({ city }) {
           <div className="row g-3">
             <div className="col-md-4">
               <div className="info-card">
-                <span>Humidity</span>
+                <span>
+                  <i className="fa-solid fa-droplet me-2"></i> Humidity
+                </span>
+
                 <h4>{weatherObj.main.humidity}%</h4>
               </div>
             </div>
 
             <div className="col-md-4">
               <div className="info-card">
-                <span>Feels Like</span>
+                <span>
+                  <i className="fa-solid fa-temperature-half me-2"></i> Feels
+                  Like
+                </span>
                 <h4>{weatherObj.main.feels_like}°C</h4>
               </div>
             </div>
 
             <div className="col-md-4">
               <div className="info-card">
-                <span>Pressure</span>
+                <span>
+                  <i className="fa-solid fa-gauge me-2"></i> Pressure
+                </span>
                 <h4>{weatherObj.main.pressure} hPa</h4>
               </div>
             </div>
 
             <div className="col-md-4">
               <div className="info-card">
-                <span>Wind Speed</span>
+                <span>
+                  <i className="fa-solid fa-wind me-2"></i> Wind Speed
+                </span>
                 <h4>{windSpeedKmph} km/h</h4>
               </div>
             </div>
 
             <div className="col-md-4">
               <div className="info-card">
-                <span>Visibility</span>
+                <span>
+                  <i className="fa-solid fa-eye me-2"></i> Visibility
+                </span>
                 <h4>{(weatherObj.visibility / 1000).toFixed(1)} km</h4>
               </div>
             </div>
@@ -121,7 +133,7 @@ export function WeatherDetailsPage({ city }) {
             <div className="row g-3">
               <div className="col-md-4">
                 <div className="info-card">
-                  <span>Sunrise</span>
+                  <i className="fa-solid fa-sun me-2"></i> Sunrise
                   <h4>
                     {new Date(
                       weatherObj.sys.sunrise * 1000,
@@ -131,7 +143,7 @@ export function WeatherDetailsPage({ city }) {
               </div>
               <div className="col-md-4">
                 <div className="info-card">
-                  <span>Sunset</span>
+                  <i className="fa-solid fa-cloud-sun me-2"></i> Sunset
                   <h4>
                     {new Date(
                       weatherObj.sys.sunset * 1000,
@@ -141,19 +153,19 @@ export function WeatherDetailsPage({ city }) {
               </div>
               <div className="col-md-4">
                 <div className="info-card">
-                  <span>Country</span>
+                  <i className="fa-solid fa-location-dot me-2"></i> Country
                   <h4>{weatherObj.sys.country}</h4>
                 </div>
               </div>
               <div className="col-md-4">
                 <div className="info-card">
-                  <span>Wind Direction</span>
+                  <i className="fa-solid fa-compass me-2"></i> Wind Direction
                   <h4>{weatherObj.wind.deg}°</h4>
                 </div>
               </div>
               <div className="col-md-4">
                 <div className="info-card">
-                  <span>Cloudiness</span>
+                  <i className="fa-solid fa-cloud me-2"></i> Cloudiness
                   <h4>{weatherObj.clouds.all}%</h4>
                 </div>
               </div>

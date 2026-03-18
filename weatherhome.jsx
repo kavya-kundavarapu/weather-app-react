@@ -1,4 +1,4 @@
-//main project..
+//main project..using MUI,bootstrap icons and open weather API..to show weather details of any city.
 import { useState, useEffect } from "react";
 import { WeatherDetailsPage } from "./weatherdetails";
 import "./weather.css";
@@ -21,8 +21,11 @@ export function WeatherHomePage() {
 
   return (
     <div className={`app-bg ${dark ? "dark-theme" : ""}`}>
-      <div className="top-bar">
-        <h3>🌤 WeatherWise</h3>
+      <div className="top-bar ">
+        <h3>
+          {" "}
+          <i className="bi bi-cloud-sun me-2"></i> WeatherWise
+        </h3>
 
         <div style={{ display: "flex", gap: 8, alignItems: "center" }}>
           <input
@@ -37,7 +40,11 @@ export function WeatherHomePage() {
             className="theme-toggle"
             onClick={() => setDark((s) => !s)}
           >
-            {dark ? "☀️" : "🌙"}
+            {dark ? (
+              <i className="bi bi-sun-fill"></i>
+            ) : (
+              <i className="bi bi-moon-fill"></i>
+            )}
           </button>
         </div>
       </div>

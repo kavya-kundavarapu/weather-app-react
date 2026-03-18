@@ -81,6 +81,10 @@
   color: var(--muted);
   font-size: 14px;
 }
+.info-card i {
+  color: #0d6efd;
+  font-size: 18px;
+}
 
 .info-card h4 {
   margin-top: 8px;
